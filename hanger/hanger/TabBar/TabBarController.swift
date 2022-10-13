@@ -10,7 +10,7 @@ class TabBarController: UITabBarController {
         self.tabBar.backgroundColor = UIColor(red: 48.0 / 255, green: 4.0 / 255, blue: 69.0 / 255, alpha: 1)
         self.tabBar.tintColor = .white
         self.tabBar.unselectedItemTintColor = .lightGray
-        let homeTabBar = UINavigationController(rootViewController: HomeTabBarVC())
+        let homeTabBar = UINavigationController(rootViewController: HomeVC())
         homeTabBar.tabBarItem.title = "홈화면"
         homeTabBar.tabBarItem.image = UIImage(systemName: "house")
         

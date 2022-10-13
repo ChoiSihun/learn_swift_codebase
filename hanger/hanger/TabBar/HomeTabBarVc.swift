@@ -2,10 +2,18 @@ import UIKit
 import Then
 import SnapKit
 
-class HomeTabBarVC: UIViewController {
+class HomeVC: UIViewController {
     
         
-       
+    let hatBt = UIButton.then {
+        $0.setTitle("HAT", for: .normal)
+        $0.font = UIFont(name: "JuliusSansOne-Regular", size: 20)
+        $0.addTarget(signinVC.self, action: #selector(TaphatBt), for: .touchUpInside)
+    
+    }
+    @objc func TaphatBt() {
+        print("go hat")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -25,3 +33,4 @@ class HomeTabBarVC: UIViewController {
 //        }
     }
 }
+
