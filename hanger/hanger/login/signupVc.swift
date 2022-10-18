@@ -61,17 +61,16 @@ class signupVC: UIViewController {
         $0.layer.cornerRadius = 25
     }
     let CKPwlb = UILabel().then {
-            $0.text = " PWCheck"
-            $0.font = UIFont(name: "JuliusSansOne-Regular", size: 20)
-        }
+        $0.text = " PWCheck"
+        $0.font = UIFont(name: "JuliusSansOne-Regular", size: 20)
+    }
     let signupBt = UIButton().then {
-        $0.backgroundColor = UIColor(red: 59/255, green: 7/255, blue: 75/255, alpha: 1)
         $0.setTitle("회원가입 하기", for: .normal)
-        $0.addTarget(signupVC.self, action: #selector(TabsignupBt), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(TabsignupBt), for: .touchUpInside)
         
     }
     @objc func TabsignupBt() {
-       print("회 원 가 입 성 공 할 까 말 까")
+        print("회 원 가 입 성 공 할 까 말 까")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,11 +139,11 @@ class signupVC: UIViewController {
             $0.right.equalToSuperview().offset(-40)
         }
         signupBt.snp.makeConstraints {
-            $0.top.equalTo(PwCKTextField).offset(80)
-            $0.bottom.equalTo(PwCKTextField).offset(80)
+            $0.top.equalTo(PwCKTextField).offset(30)
+            $0.bottom.equalTo(PwCKTextField).offset(30)
             $0.left.equalToSuperview().offset(40)
             $0.right.equalToSuperview().offset(-40)
         }
-    }
+    } //Auto Layout
     
 }
